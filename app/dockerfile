@@ -1,0 +1,7 @@
+#utilisons une image PHP apache
+FROM php:apache
+#copy de toute l'appl dans le répertoire du travail du conteneur
+COPY . /var/www/html
+
+# installons les dépendances de PDO pour MySQL
+RUN docker-php-ext-install pdo pdo_mysql
